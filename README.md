@@ -86,7 +86,7 @@ For the full stack, use Compose. To override backend hosts with env vars (e.g. a
 | `/api/v1alpha1/catalog-items`            | CatalogManager         |
 | `/api/v1alpha1/catalog-item-instances`   | CatalogManager         |
 | `/api/v1alpha1/policies`                 | PolicyManager          |
-| `/api/v1alpha1/resources`             | PlacementManager       |
+| `/api/v1alpha1/resources`                | PlacementManager       |
 
 Health paths above are GET-only; other paths support multiple methods (GET, POST, PUT, DELETE as per the API).
 
