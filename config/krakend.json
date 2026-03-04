@@ -4,6 +4,20 @@
   "name": "dcm-api-gateway",
   "port": 9080,
   "timeout": "2s",
+  "x-contract-specs": {
+    "service-provider-manager": {
+      "openapi_url": "https://raw.githubusercontent.com/dcm-project/service-provider-manager/main/api/v1alpha1/openapi.yaml"
+    },
+    "catalog-manager": {
+      "openapi_url": "https://raw.githubusercontent.com/dcm-project/catalog-manager/main/api/v1alpha1/openapi.yaml"
+    },
+    "policy-manager": {
+      "openapi_url": "https://raw.githubusercontent.com/dcm-project/policy-manager/main/api/v1alpha1/openapi.yaml"
+    },
+    "placement-manager": {
+      "openapi_url": "https://raw.githubusercontent.com/dcm-project/placement-manager/main/api/v1alpha1/openapi.yaml"
+    }
+  },
   "endpoints": [
     {
       "endpoint": "/api/v1alpha1/health/providers",
@@ -52,7 +66,7 @@
           "url_pattern": "/api/v1alpha1/health",
           "method": "GET",
           "host": [
-            "http://placement:8080"
+            "http://placement-manager:8080"
           ]
         }
       ]
@@ -312,7 +326,7 @@
           "url_pattern": "/applications",
           "method": "GET",
           "host": [
-            "http://placement:8080"
+            "http://placement-manager:8080"
           ]
         }
       ]
@@ -325,7 +339,7 @@
           "url_pattern": "/applications",
           "method": "POST",
           "host": [
-            "http://placement:8080"
+            "http://placement-manager:8080"
           ]
         }
       ]
